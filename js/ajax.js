@@ -51,7 +51,7 @@ $('document').ready(function () {
 			processData: false,
 			success: function(){
 				console.log('got here');
-				cardloading();
+//				cardloading();
 			}
 		});
         function bizcheck(w){
@@ -64,12 +64,8 @@ $('document').ready(function () {
 			window.location.replace("b2c.html")
         }
     }
-        if(document.getElementById('custom').value !== ""){
-        window.location.replace("other.html")
-        } else {
         webtype = document.querySelector('input[name=webtype]:checked').value;
 	   bizcheck(webtype);
-    };
 		e.preventDefault();
 	});
 });
