@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+        <!--Required metatag and stylesheet-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<title>Web Development Plan Generator</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/ajax.js"></script>
+        <!--Custom styles here-->
+    <link rel="stylesheet" href ="css/style.css">
+    
+	<style>
+		*{
+			font-family: sans-serif;
+			box-sizing: border-box;
+		}
+
+		#profile{
+			margin: 0px auto;
+			text-align: center;
+		}
+
+		.person{
+			width:300px;
+			padding:5px 20px 20px 20px;
+			display: inline-block;
+			text-align: left;
+			vertical-align: top;
+			background-color: #000;
+			color:#fff;
+			border:1px #333 solid;
+			border-radius:5px;
+			margin:10px;
+			min-height:400px;
+		}
+
+		.person .profileImage{
+			text-align: center;
+		}
+
+		.person img{
+			width: 200px;
+			border-radius:50%;
+			border:2px #fff solid;
+		}
+
+		.person h5{
+			margin:10px 0px 0px 0px;
+		}
+
+		.person h5+p{
+			margin:0px;
+		}
+	</style>
+</head>
+<body>
+
+<h2>Web Development Plan Generator</h2>
+<form method="post" enctype="multipart/form-data">
+<!--
+<label>Name
+	<input type="text" name="name" required><br>
+</label>
+<br>
+<label>Photo
+	<input type="file" name="photo" required><br>
+</label>
+-->
+<p><b>What type of website do you want to build?</b></p>
+<label><input type="radio" name="webtype" value="personal"> Personal
+</label>
+    <br>
+<label><input type="radio" name="webtype" value="b2b"> Business to Business (B2B)
+</label>
+    <br>
+<label><input type="radio" name="webtype" value="b2c"> Business to Consumer (B2C)
+</label>
+    <br>
+       <input type="text" name="webtype" class="tspace" placeholder="Other" id="custom">
+        
+	<br>
+    <br>
+<input type="submit" name="submit" value="Submit" id="submit">
+ 
+</form>
+	<div id="profile">
+		<h2>Profiles</h2>
+	</div>
+<!--
+    <script>
+    function bizcheck(w){
+		//do the same with snack, but also check if snack is cupcake
+		if ( w == 'personal' ){
+			window.location.replace("personal.html")
+		} else if ( w == 'b2b'){
+			window.location.replace("b2b.html")
+		} else {
+			window.location.replace("b2c.html")
+        }
+    }
+        
+	//generate reset button
+//	document.write('<button type="reset" onclick="location.reload();">start over</button>');
+
+
+document.getElementById('submit').onclick= function(){
+    if(document.getElementById('custom').value !== ""){
+        window.location.replace("other.html")
+    } else {
+        webtype = document.querySelector('input[name=webtype]:checked').value;
+	bizcheck(webtype);
+    }
+};
+    </script>
+-->
+</body>
+</html>
