@@ -54,18 +54,18 @@ $('document').ready(function () {
 //				cardloading();
 			}
 		});
-        function bizcheck(w){
-		//do the same with snack, but also check if snack is cupcake
-		if ( w == 'personal' ){
-			window.location.replace("personal.html")
-		} else if ( w == 'b2b'){
-			window.location.replace("b2b.html")
-		} else {
-			window.location.replace("b2c.html")
-        }
-    }
-        webtype = document.querySelector('input[name=webtype]:checked').value;
-	   bizcheck(webtype);
+//        function bizcheck(w){
+//		//do the same with snack, but also check if snack is cupcake
+//		if ( w == 'personal' ){
+//			window.location.replace("personal.html")
+//		} else if ( w == 'b2b'){
+//			window.location.replace("b2b.html")
+//		} else {
+//			window.location.replace("b2c.html")
+//        }
+//    }
+//        webtype = document.querySelector('input[name=webtype]:checked').value;
+//	   bizcheck(webtype);
 		e.preventDefault();
 	});
 });
