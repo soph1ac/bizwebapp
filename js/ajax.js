@@ -39,35 +39,35 @@ $('document').ready(function () {
 // upon form submission remove all the cards on the  index page
 // Post the data from the form to my PHP which will update for Json file
 // upon success rerun the function to dynamically generated the cards on the next page
-	$("#target").submit(function (e) {
-		$('.person').remove();
-		var formData = new FormData($(this)[0]);
-		$.ajax({
-			url: "ajaxprocess.php",
-			type: "POST",
-			data: formData,
-			cache: false,
-			contentType: false,
-			processData: false,
-			success: function(){
-				console.log('got here');
-//				cardloading();
-			}
-		});
-        function bizcheck(w){
-		//do the same with snack, but also check if snack is cupcake
-		if ( w == 'personal' ){
-			window.location.replace("personal.html")
-		} else if ( w == 'b2b'){
-			window.location.replace("sec-audit.html")
-		} else {
-			window.location.replace("b2c.html")
-        }
-    }
-        webtype = document.querySelector('input[name=webtype]:checked').value;
-	   bizcheck(webtype);
-		e.preventDefault();
-	});
+//	$("#target").submit(function (e) {
+//		$('.person').remove();
+//		var formData = new FormData($(this)[0]);
+//		$.ajax({
+//			url: "ajaxprocess.php",
+//			type: "POST",
+//			data: formData,
+//			cache: false,
+//			contentType: false,
+//			processData: false,
+//			success: function(){
+//				console.log('got here');
+////				cardloading();
+//			}
+//		});
+//        function bizcheck(w){
+//		//do the same with snack, but also check if snack is cupcake
+//		if ( w == 'personal' ){
+//			window.location.replace("personal.html")
+//		} else if ( w == 'b2b'){
+//			window.location.replace("sec-audit.html")
+//		} else {
+//			window.location.replace("b2c.html")
+//        }
+//    }
+//        webtype = document.querySelector('input[name=webtype]:checked').value;
+//	   bizcheck(webtype);
+//		e.preventDefault();
+//	});
 //});
 
 //Ajax for b2b
