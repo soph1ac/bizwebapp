@@ -7,11 +7,11 @@ $w = $_POST['webtype'];
 $j = file_get_contents('ppl.json');
 $j = json_decode($j, true);
 
-//print_r ($j);
+print_r ($j);
 
-$k = "object".$objectCount;
+//$k = "object".$objectCount;
 
-//format the id
+format the id
 $i = count($j);
 $i = ++$i;
 
@@ -21,11 +21,11 @@ $add = array(
 	"webtype" => $w,
 //	"gender" => $g
 );
-//print_r ($add);
+print_r ($add);
 
 // append my new array into the json array
 array_push($j, $add);
-//print_r ($j);
+print_r ($j);
 
 // take my updated json array, format it back into Json and Overwrite it into the Json file
 $j = json_encode($j);

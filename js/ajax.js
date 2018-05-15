@@ -17,7 +17,7 @@ $('document').ready(function () {
 					console.log(index);
 					console.log(value);
 					console.log(value.id);
-					console.log(value.name);
+					console.log(value.webtype);
 
 					var id = value.id;
 					var webtype = value.webtype;
@@ -59,7 +59,7 @@ $('document').ready(function () {
 //		if ( w == 'personal' ){
 //			window.location.replace("personal.html")
 //		} else if ( w == 'b2b'){
-//			window.location.replace("b2b.html")
+//			window.location.replace("sec-audit.html")
 //		} else {
 //			window.location.replace("b2c.html")
 //        }
@@ -69,3 +69,50 @@ $('document').ready(function () {
 		e.preventDefault();
 	});
 });
+
+//Ajax for b2b
+//	$("form").submit-b2b(function (e) {
+//		var formData = new FormData($(this)[0]);
+//		$.ajax({
+//			url: "ajaxprocess-b2b.php",
+//			type: "POST",
+//			data: formData,
+//			cache: false,
+//			contentType: false,
+//			processData: false,
+//			success: function(){
+//			console.log('got here');
+//}
+//		});
+//	window.location.replace("alt-languages.html")
+//	});
+//});
+
+//Ajax for sec-audit
+//	$("#sec-audit").submit (function(e) {
+//		var formData = new FormData($(this)[0]);
+//		$.ajax({
+//			url: "ajaxprocess-sec-audit.php",
+//			type: "POST",
+//			data: formData,
+//			cache: false,
+//			contentType: false,
+//			processData: false,
+//			success: function(){
+//			console.log('got here');
+//}
+//		});
+//        function seccheck(sa){
+//		//do the same with snack, but also check if snack is cupcake
+//		if ( sa == 'y' ){
+//			window.location.replace("other.html")
+//		} else {
+//			window.location.replace("b2b.html")
+//		}
+//    }
+//        sa = document.querySelector('input[name=sec-audit]:checked').value;
+//	   seccheck(sa);
+//		e.preventDefault();
+//	});
+
+

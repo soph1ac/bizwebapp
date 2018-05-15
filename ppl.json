@@ -1,1 +1,1 @@
-[{"id":1,"webtype":""},{"id":2,"webtype":"b2c","0":"matches"},{"id":3,"webtype":"personal"},{"id":4,"webtype":"b2b"},{"id":5,"webtype":"personal"},{"id":6,"webtype":"b2b"},{"id":7,"webtype":"b2c"},"matches"]
+[{"id":1,"name":"A","gender":"Male"},{"id":2,"name":"b2b","gender":null},{"id":3,"webtype":null},{"id":4,"webtype":null},{"id":5,"webtype":"b2b"}]
