@@ -25,6 +25,7 @@ $add = array(
 
 // append my new array into the json array
 array_push($j, $add);
+//array_push($j[--$i], "test");
 //print_r ($j);
 
 // take my updated json array, format it back into Json and Overwrite it into the Json file
