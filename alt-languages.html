@@ -2,20 +2,37 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-store" />
     <title>Alternate Languages</title>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/ajax.js"></script>
+        <!--Custom styles here-->
+    <link rel="stylesheet" href ="css/style.css">
 </head>
     
 <body>
+<div id="alanguages">
+<h1>Web Development Plan Generator (Cont'd)</h1>
+<br>
+<form id="alt-languages" method="post" enctype="multipart/form-data">
+<br>
 <p><b>What alternate language versions of your website would be required?</b></p>
-<label><input type="checkbox" name="alt-languages" value="none"> None<br>
+<br>
+<label><input type="checkbox" name="alt-languages[]" value="none"> None<br>
 </label>
-<label><input type="checkbox" name="alt-languages" value="chinese"> Chinese<br>
+<label><input type="checkbox" name="alt-languages[]" value="chinese"> Chinese<br>
+    </label>
+<label><input type="checkbox" name="alt-languages[]" value="spanish"> Spanish<br>
+    </label>
+<label><input type="checkbox" name="alt-languages[]" value="french"> French<br>
+</label>
 	<br>
-<label><input type="checkbox" name="alt-languages" value="spanish"> Spanish<br>
-	<br>
-<label><input type="checkbox" name="alt-languages" value="french"> French<br>
-	<br>
-<input type="submit" name="submit-alt-languages" value="submit-alt-languages" id="submit-alt-languages">
+<input type="submit" name="submit" value="Next" id="submit">
+    </form>
+</div>
 </body>
     
-</html>	
+</html>

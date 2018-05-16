@@ -1,6 +1,6 @@
-<?php session_start();
+<?php
 //Store data from my form into variables
-$s = $_POST['sec-audit'];
+$p = $_POST['alt-languages'];
 //$g = $_POST['gender'];
 
 //retrieve the Json file and converted it into php array
@@ -10,33 +10,32 @@ $j = json_decode($j, true);
 //print_r ($j);
 
 $k = "object".$objectCount;
-
+//
 //format the id
-//$i = count($j);
-//$i = ++$i;
-
+$i = count($j);
+$i = ++$i;
+//
 //// insert my variables into an array stored in a variable called $add
-//$add = array(
-//	"id" => $i,
-//	"secaudit" => $s,
-////	"gender" => $g
+$add = array(
+	"id" => $i,
+	"alanguages" => $p,
+//	"gender" => $g
 //);
 ////print_r ($add);
 //
 //// append my new array into the json array
 ////array_push($j[$i-2], $add);
-//array_push($j, $add);
-
+array_push($j, $add);
+//
 //foreach($j as $k=>$v){
 //    if ($v['id'] == $_SESSION['i']){
-//        $j[$k]['secaudit'] = $s;
-//    };
-//};
+//        $v['alt-languages'] = $s;
+//    }
+//}
 
 $k = count($j);
 --$k;
 $j[$k]['secaudit'] = $s;
-
 print_r ($j);
 
 // take my updated json array, format it back into Json and Overwrite it into the Json file

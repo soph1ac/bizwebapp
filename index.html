@@ -13,63 +13,16 @@
     <link rel="stylesheet" href ="css/style.css">
     
 	<style>
-		*{
-			font-family: sans-serif;
-			box-sizing: border-box;
-		}
-
-		#profile{
-			margin: 0px auto;
-			text-align: center;
-		}
-
-		.person{
-			width:300px;
-			padding:5px 20px 20px 20px;
-			display: inline-block;
-			text-align: left;
-			vertical-align: top;
-			background-color: #000;
-			color:#fff;
-			border:1px #333 solid;
-			border-radius:5px;
-			margin:10px;
-			min-height:400px;
-		}
-
-		.person .profileImage{
-			text-align: center;
-		}
-
-		.person img{
-			width: 200px;
-			border-radius:50%;
-			border:2px #fff solid;
-		}
-
-		.person h5{
-			margin:10px 0px 0px 0px;
-		}
-
-		.person h5+p{
-			margin:0px;
-		}
 	</style>
 </head>
 <body>
 
-<h2>Web Development Plan Generator</h2>
-<form id="target" method="post" enctype="multipart/form-data">
-<!--
-<label>Name
-	<input type="text" name="name" required><br>
-</label>
+<div id = "s1">
+<h1>Web Development Plan Generator</h1>
 <br>
-<label>Photo
-	<input type="file" name="photo" required><br>
-</label>
--->
+<form id="target" method="post" enctype="multipart/form-data">
 <p><b>What type of website do you want to build?</b></p>
+<br>
 <label><input type="radio" name="webtype" value="personal"> Personal <br>
 </label>
 <label><input type="radio" name="webtype" value="b2b"> Business to Business (B2B)<br>
@@ -77,12 +30,15 @@
 <label><input type="radio" name="webtype" value="b2c"> Business to Business (B2C)<br>
 </label>
 	<br>
-<input type="submit" name="submit" value="Submit" id="submit">
+<input type="submit" name="submit" value="Start" id="submit">
  
 </form>
+<!--
 	<div id="profile">
 		<h2>Profiles</h2>
 	</div>
+</div>
+-->
 <!--
     <script>
     function bizcheck(w){

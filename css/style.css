@@ -1,6 +1,42 @@
 *{
 	font-family: sans-serif;
 	box-sizing: border-box;
+font-size: 16px;
+color: #1e7ad2;
+    	padding: 0;
+   	margin: 0;
+}
+body {
+    background: #82b4f3;
+}
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    color: #050506;
+    line-height:1.5;
 }
 
 #profile{
@@ -38,4 +74,53 @@
 
 .person h5+p{
 	margin:0px;
+}
+
+#s1 {
+    padding: 50px;
+}
+
+h1, h2, h3, p {
+    text-align: center;
+}
+
+#s1 label {
+margin-left:40%;
+}
+
+#submit {
+margin-left:46%;
+}
+
+#pg2 {
+    padding: 50px;
+}
+
+#pg2 label {
+margin-left:46%;
+}
+
+#other {
+padding: 50px;
+}
+
+#bspecs {
+    padding: 50px;
+}
+
+#bspecs label {
+margin-left:38%;
+}
+
+#alanguages {
+    padding: 50px;
+}
+
+#alanguages label {
+margin-left:45%;
+}
+
+#results img{
+    align-items: center;
+    align-content: center;
 }

@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 //Store data from my form into variables
 $w = $_POST['webtype'];
 //$g = $_POST['gender'];
@@ -21,12 +21,15 @@ $add = array(
 	"webtype" => $w,
 //	"gender" => $g
 );
+
+$_SESSION['i'] = $i;
+
 //print_r ($add);
 
 // append my new array into the json array
 array_push($j, $add);
 //array_push($j[--$i], "test");
-//print_r ($j);
+print_r ($j);
 
 // take my updated json array, format it back into Json and Overwrite it into the Json file
 $j = json_encode($j);

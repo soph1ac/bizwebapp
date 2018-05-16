@@ -1,38 +1,21 @@
-$('document').ready(function () {
-	// Credit function to dynamically generated the cards on the index page
-	function cardloading() {
-		// is Ajax method to retrieve the Json file
-		$.ajax({
-			url: 'ppl.json',
-			type: 'get',
-			dataType: 'JSON',
-			cache: false,
-			error: function (data) {
-				console.log(data);
-			},
-			success: function (data) {
-				// upon successfully retrieving the json file loop through the data dynamically generate cards on the index page
-				$.each(data, function (index, value) {
-					console.log(Object.keys(value));
-					console.log(index);
-					console.log(value);
-					console.log(value.id);
-					console.log(value.webtype);
-if (value.webtype = "b2b"){
-					console.log(value.specs);
-					console.log(value.alt-languagues);
+<!doctype html>
+<html>
+<head>
+        <!--Required metatag and stylesheet-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<title>Web Development Plan Generator</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/ajax-results.js"></script>
+        <!--Custom styles here-->
+    <link rel="stylesheet" href ="css/style.css">
 
-
-					var id = value.id;
-					var webtype = value.webtype;
-//					var gender = value.gender;
-
-					$('#profile').append('<div class="person" id="p' + id + '"></div>');
-					$('#p' + id).append(`
-						<h3> ${id} </h3>
-						<h4>Webtype: ${webtype}</h4>
-					`);
-				});
-			}
-		});
-	}
+<div id="results">
+<h1>Web Development Plan Generator (End)</h1>
+<br>
+	<div id="profile">
+		<h2>Results</h2>
+	</div>
+<!--<img src="img/results.jpg">-->

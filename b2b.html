@@ -2,32 +2,43 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-store" />
     <title>Web Dev Plan Generator - B2B</title>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/ajax.js"></script>
+        <!--Custom styles here-->
+    <link rel="stylesheet" href ="css/style.css">
 </head>
     
 <body>
-    <h2>Web Development Plan Generator</h2>
-<form id="b2b" method="post" enctype="multipart/form-data">
+<div id="b2b">
+<h1>Web Development Plan Generator (Cont'd)</h1>
+<br>
+<form id="bspecs" method="post" enctype="multipart/form-data">
 <p><b>Check all the services and features you would like for your website.</b></p>
-<label><input type="checkbox" name="specs" value="subpages"> Subpages: About and Contact<br>
+<br>
+<label><input type="checkbox" name="bspecs[]" value="subpages"> Subpages: About and Contact<br>
 </label>
-<label><input type="checkbox" name="specs" value="blog"> Blog and Wordpress integration<br>
+<label><input type="checkbox" name="bspecs[]" value="blog"> Blog and Wordpress integration<br>
 </label>
-<label><input type="checkbox" name="specs" value="feeds"> Live social media feeds<br>
+<label><input type="checkbox" name="bspecs[]" value="feeds"> Live social media feeds<br>
 </label>
-<label><input type="checkbox" name="specs" value="sign-up"> Sign-up and contact info collection capability<br>
+<label><input type="checkbox" name="bspecs[]" value="sign-up"> Sign-up and contact info collection capability<br>
 </label>
-<label><input type="checkbox" name="specs" value="ecommerce"> E-commerce and Shopify integration<br>
+<label><input type="checkbox" name="bspecs[]" value="ecommerce"> E-commerce and Shopify integration<br>
 </label>
-<label><input type="checkbox" name="specs" value="https"> HTTPS certificate for data encryption<br>
+<label><input type="checkbox" name="bspecs[]" value="https"> HTTPS certificate for data encryption<br>
 </label>
-<label><input type="checkbox" name="specs" value="mcafee"> McAfee secure certification<br>
+<label><input type="checkbox" name="bspecs[]" value="mcafee"> McAfee secure certification<br>
 </label>
 	<br>
-<input type="submit" name="submit-b2b" value="submit-b2b" id="submit-b2b">
+<input type="submit" name="submit" value="Next" id="submit">
  
 </form>
-
+    </div>
 </body>
     
 </html>

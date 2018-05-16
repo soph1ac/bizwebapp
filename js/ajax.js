@@ -34,62 +34,45 @@ $('document').ready(function () {
 	}
 
 // execute the function I just created on page load
-	cardloading();
+//	cardloading();
 
 // upon form submission remove all the cards on the  index page
 // Post the data from the form to my PHP which will update for Json file
 // upon success rerun the function to dynamically generated the cards on the next page
-//	$("#target").submit(function (e) {
-//		$('.person').remove();
-//		var formData = new FormData($(this)[0]);
-//		$.ajax({
-//			url: "ajaxprocess.php",
-//			type: "POST",
-//			data: formData,
-//			cache: false,
-//			contentType: false,
-//			processData: false,
-//			success: function(){
-//				console.log('got here');
-////				cardloading();
-//			}
-//		});
-//        function bizcheck(w){
-//		//do the same with snack, but also check if snack is cupcake
-//		if ( w == 'personal' ){
-//			window.location.replace("personal.html")
-//		} else if ( w == 'b2b'){
-//			window.location.replace("sec-audit.html")
-//		} else {
-//			window.location.replace("b2c.html")
-//        }
-//    }
-//        webtype = document.querySelector('input[name=webtype]:checked').value;
-//	   bizcheck(webtype);
-//		e.preventDefault();
-//	});
-//});
-
-//Ajax for b2b
-//	$("form").submit-b2b(function (e) {
-//		var formData = new FormData($(this)[0]);
-//		$.ajax({
-//			url: "ajaxprocess-b2b.php",
-//			type: "POST",
-//			data: formData,
-//			cache: false,
-//			contentType: false,
-//			processData: false,
-//			success: function(){
-//			console.log('got here');
-//}
-//		});
-//	window.location.replace("alt-languages.html")
-//	});
+	$("#target").submit(function (e) {
+		$('.person').remove();
+		var formData = new FormData($(this)[0]);
+		$.ajax({
+			url: "ajaxprocess.php",
+			type: "POST",
+			data: formData,
+			cache: false,
+			contentType: false,
+			processData: false,
+			success: function(){
+				console.log('got here');
+//				cardloading();
+			}
+		});
+        function bizcheck(w){
+		//do the same with snack, but also check if snack is cupcake
+		if ( w == 'personal' ){
+			window.location.replace("personal.html")
+		} else if ( w == 'b2b'){
+			window.location.replace("sec-audit.html")
+		} else {
+			window.location.replace("b2c.html")
+        }
+    }
+        webtype = document.querySelector('input[name=webtype]:checked').value;
+	   bizcheck(webtype);
+		e.preventDefault();
+	});
+//    Get rid of below if adding functions instead of testing
 //});
 
 //Ajax for sec-audit
-	$("form").submit (function(e) {
+	$("#sec-audit").submit (function(e) {
 		var formData = new FormData($(this)[0]);
 		$.ajax({
 			url: "ajaxprocess-sec-audit.php",
@@ -102,17 +85,57 @@ $('document').ready(function () {
 			console.log('got here');
 }
 		});
-//        function seccheck(sa){
-//		//do the same with snack, but also check if snack is cupcake
-//		if ( sa == 'y' ){
-//			window.location.replace("other.html")
-//		} else {
-//			window.location.replace("b2b.html")
-//		}
-//    }
-//        sa = document.querySelector('input[name=sec-audit]:checked').value;
-//	   seccheck(sa);
+
+//Redirect based on response
+        function seccheck(sa){
+		if ( sa == 'y' ){
+			window.location.replace("other.html")
+		} else {
+			window.location.replace("b2b.html")
+		}
+    }
+        sa = document.querySelector('input[name=sec-audit]:checked').value;
+	   seccheck(sa); 
+        
+//Make sure below is in when testing, but take out second parens if adding below
+		e.preventDefault();
+	});
+//});
+
+//Ajax for b2b
+	$("#bspecs").submit (function (e) {
+		var formData = new FormData($(this)[0]);
+		$.ajax({
+			url: "ajaxprocess-b2b.php",
+			type: "POST",
+			data: formData,
+			cache: false,
+			contentType: false,
+			processData: false,
+			success: function(){
+			console.log('got here');
+}
+		});
+	window.location.replace("alt-languages.html")
+		e.preventDefault();
+	});
+//});
+//
+////Ajax for alt-languages
+	$("#alanguages").submit (function (e) {
+		var formData = new FormData($(this)[0]);
+		$.ajax({
+			url: "ajaxprocess-alt.php",
+			type: "POST",
+			data: formData,
+			cache: false,
+			contentType: false,
+			processData: false,
+			success: function(){
+			console.log('got here');
+}
+		});
+	window.location.replace("results.html")
 		e.preventDefault();
 	});
 });
-
