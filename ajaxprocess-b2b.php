@@ -20,7 +20,7 @@ $k = "object".$objectCount;
 //	"id" => $i,
 //	"bspecs" => $b,
 //	"gender" => $g
-);
+//);
 //print_r ($add);
 
 // append my new array into the json array
