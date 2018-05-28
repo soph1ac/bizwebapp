@@ -16,7 +16,7 @@ $k = "object".$objectCount;
 //$i = ++$i;
 
 //// insert my variables into an array stored in a variable called $add
-//$add = array(
+//$add = array(0z0zooZOl4
 //	"id" => $i,
 //	"secaudit" => $s,
 ////	"gender" => $g

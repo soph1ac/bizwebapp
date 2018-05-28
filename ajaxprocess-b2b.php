@@ -36,6 +36,7 @@ $k = "object".$objectCount;
 //}
 
 $k = count($j);
+--$k;
 $j[$k]['bspecs'] = $b;
 
 print_r ($j);

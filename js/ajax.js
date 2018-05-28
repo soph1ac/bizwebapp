@@ -96,7 +96,7 @@ $('document').ready(function () {
     }
         sa = document.querySelector('input[name=sec-audit]:checked').value;
 	   seccheck(sa); 
-        
+//        
 //Make sure below is in when testing, but take out second parens if adding below
 		e.preventDefault();
 	});
@@ -116,26 +116,26 @@ $('document').ready(function () {
 			console.log('got here');
 }
 		});
-	window.location.replace("alt-languages.html")
-		e.preventDefault();
-	});
-//});
-//
-////Ajax for alt-languages
-	$("#alanguages").submit (function (e) {
-		var formData = new FormData($(this)[0]);
-		$.ajax({
-			url: "ajaxprocess-alt.php",
-			type: "POST",
-			data: formData,
-			cache: false,
-			contentType: false,
-			processData: false,
-			success: function(){
-			console.log('got here');
-}
-		});
-	window.location.replace("results.html")
+//	window.location.replace("alt-languages.html")
 		e.preventDefault();
 	});
 });
+////
+//////Ajax for alt-languages
+//	$("#alanguages").submit (function (e) {
+//		var formData = new FormData($(this)[0]);
+//		$.ajax({
+//			url: "ajaxprocess-alt.php",
+//			type: "POST",
+//			data: formData,
+//			cache: false,
+//			contentType: false,
+//			processData: false,
+//			success: function(){
+//			console.log('got here');
+//}
+//		});
+//	window.location.replace("results.html")
+//		e.preventDefault();
+//	});
+//});
